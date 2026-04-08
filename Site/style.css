@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('imagens/fundo5.jpg') no-repeat center center fixed; 
+  background-size: cover; /* Faz a imagem cobrir a tela inteira sem esticar errado */
+  color: #111;
+}
+
+/* ----------------------------------------------------------------------- PRIMEIRA SEÇÃO (INTRO) ---------------------------------------------- */
+
+/* CONTAINER DO MENU */
+.nav {
+  width: 100%;             
+  background-color: transparent;
+  padding: 40px 5%;       
+  display: flex;
+  /* Distribui o espaço entre os itens p preencher a largura */
+  justify-content: space-around; 
+  align-items: center;
+  gap: 15px; /* Espaço mínimo entre os botões */
+  flex-wrap: nowrap; /* na mesma linha para preencher o espaçp do tpop */
+}
+
+/* BOTÕES DO MENU */
+.nav a {
+  text-decoration: none;
+  color: #111;
+  background-color: #FDF5E6;
+  padding: 12px 30px; 
+  border-radius: 50px;
+  border: 3px solid #111;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0px #111; 
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #111;
+  background-color: #fff;
+  color: #ff3091;
+}
+
+/* Efeito de clicar */
+.nav a:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #111;
+}
+
+/* MAIN */
+.container {
+  max-width: 1400px; /* ocupar a tela */
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 40px; 
+}
+
+/* TEXTO */
+.hero-left {
+  flex: 1;
+}
+
+.logo-text span {
+  color: #f30574;
+}
+
+.logo-text {
+  font-size: 130px; /* Bem grande kjasjksjksjak */
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.linha {
+  width: 520px;     /* linha do coiso */
+  height: 0.5px;      /* fininha */
+  background: #242424;
+  margin: 40px 0;   /* respiro */
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.descricao {
+  max-width: 4500px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* CARD */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  width: 380px; 
+  height: 380px;
+  flex-shrink: 0;
+  animation: flutuar 3s ease-in-out infinite; 
+}
+
+.card-bg {
+  position: absolute;
+  bottom: -20px;  
+  right: -20px;   
+  width: 100%;
+  height: 100%;
+  background: #4b333c;
+  filter: blur(15px); /*EMBAÇADO */
+  opacity: 0.7;        /* Deixa a sombra um pouco mais transparente */
+  z-index: -1;        /* Garante que fique atrás do card branco */
+}
+
+.card-content {
+  border-radius: 20px 20px 20px 20PX; /*arredondamento*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 3px solid #111; /* borda mais grossa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card-content img {
+  max-width: 100%;
+  width: 650px;
+  height: auto;
+}
+
+/* Define o movimento de subir e descer       ANIMAÇÃO        */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0); /* Posição inicial */
+  }
+  50% {
+    transform: translateY(-20px); /* Sobe 20 pixels */
+  }
+  100% {
+    transform: translateY(0); /* Volta ao início */
+  }
+}
+
+/* ---------------------------------------------------------------------- SEÇÃO VALORES (SEGUNDA SEÇÃO) ---------------------------------------- */
+
+.valores-titulo span {
+  color: #ff5757;
+}
+
+.valores-section {
+  width: 100%;
+  padding: 100px 60px;
+  /* Degradê suave de fundo à imagem */
+  background: linear-gradient(to bottom, transparent, #ff98ec, #e5bdff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valores-titulo {
+  font-size: 110px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* GRID DOS CARDS */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 60px 40px; /* Espaço entre os cards */
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ESTILO DOS MINI CARDS */
+.valor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.valor-card:hover{
+  transform: translateY(-10px); /* Eleva o elemento em 10px */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adiciona sombra para efeito 3D */
+}
+
+.valor-bg {
+  display: none; 
+}
+
+.valor-card {
+  height: 250px; 
+  transition: all 0.8s ease;
+}
+
+.valor-content {
+  border-radius: 30px; /*arredondamento */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fdf5e6;
+  border: 3px solid #111;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* A MESMA SOMBRA DO BOTÃO */
+  box-shadow: 8px 8px 0px #111; 
+}
+
+.valor-card:hover .valor-content {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #111;
+}
+
+.valor-content p {
+  font-size: 18px;
+  line-height: 1.4;
+  max-width: 250px;
+}
+
+
+/* -------------------------------------------------------------------- SEÇÃO SERVIÇOS (TERCEIRA SEÇÃO) ---------------------------------------- */
+
+/* Container Principal da Seção */
+.servicos-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e5bdff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+/* Divisor interno para alinhar esquerda e direita */
+.servicos-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 80px;
+  align-items: center;
+}
+
+/* --- ESTILO DOS TEXTOS (ESQUERDA) --- */
+
+.servicos-textos {
+  flex: 1;
+}
+
+.servicos-titulo {
+  font-size: 110px; /* Tamanho grande*/
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 40px;
+}
+
+.servicos-titulo span {
+  color: #AF40FF;
+}
+
+.servicos-descricao {
+  font-size: 24px;
+  line-height: 1.4;
+  max-width: 500px;
+  font-weight: 400;
+}
+
+/* --- ESTILO DOS CARDS (DIREITA) --- */
+
+.servicos-lista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os cards cor behe */
+}
+
+.servico-item {
+  background-color: #FDF5E6;
+  height: 75px; 
+  width: 100%;
+  border-radius: 50px;
+  border: 3px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  
+  /* Remove o sublinhado do link */
+  text-decoration: none; 
+  /*Garante que o link preencha o espaço */
+  display: flex; 
+
+  box-shadow: 6px 6px 0px #111; 
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+
+.servico-item:hover p {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.servico-item:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #111;
+  background-color: #ff5757;
+}
+
+.servico-item p {
+  font-size: 16px; 
+  font-weight: 700; 
+  color: #111;
+  text-align: center;
+  margin: 0; /*evitar deslocamentos do texto */
+}
+
+.servico-item:active {
+  transform: translate(3px, 3px); /* Ele "desce" na direção da sombra */
+  box-shadow: 2px 2px 0px #111;   /* A sombra diminui */
+}
+
+
+
+
+/*----------------------------------------------------------------------- QUARTA SEÇÃO EM BREVE AQUI.... ---------------------------------------*/
+/* FAIXA ANIMADA */
+.marquee-banner {
+  width: 100%;
+  background-color: #fff; 
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  overflow: hidden; /* Esconde o que sai da tela */
+  padding: 10px 0;
+  display: flex;
+}
+
+.marquee-content2 {
+  display: flex;
+  white-space: nowrap;
+  animation: girar-faixa 50s linear infinite; /* Velocidade da animação */
+}
+
+.marquee-content2 span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff00bf; 
+  padding: 0 10px;
+}
+
+@keyframes girar-faixa {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* Move metade, faz parecr infinito */
+}
+
+
+.secao-nossa-loja {
+  background-color: #9055c8; 
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;       
+  padding: 80px 10%;
+  min-height: 450px;
+}
+
+.bloco-texto {
+  max-width: 450px;         
+  text-align: right;          
+}
+
+.bloco-texto h1 {
+  font-size: 110px;          
+  font-weight: 800;
+  line-height: 0.85;         
+  letter-spacing: -5px;      
+  margin-bottom: 30px;
+}
+
+.bloco-texto p {
+  font-size: 22px;           
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.bloco-texto{
+  color: white;
+}
+.bloco-texto span{
+  color: #ff5757;
+}
+
+/* PARTE DO CARROSSEL E DO CARD DOS 'PRODUTOS' vazio por enquanto */
+
+
+/* PARTE DA DOAÇÃO PARA O BAZAR */
+
+/* ------------------------------------------------------------------- 'QUINTA SEÇÃO'   SEÇÃO DOAÇÃO ----------------------------------------- */
+
+.doacao-section {
+  background-color: #9055C8; 
+  padding: 120px 10%; 
+  color: #fff;
+}
+
+.doacao-container {
+  display: flex;
+  max-width: 1300px; /*+ largo para alinhar com o topo */
+  margin: 0 auto;
+  gap: 100px; /* espaço entre as imagens e o texto */
+  align-items: center;
+}
+
+/*    L A D O               E S Q U E R D O */
+.categorias-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* espaço entre cada card de imagem */
+}
+
+.categoria-item {
+  position: relative;
+  width: 100%;
+  height: 120px; 
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #111;
+  box-shadow: 6px 6px 0px #111; /* aombra sólida */
+}
+
+.categoria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.categoria-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  font-weight: 800;
+  text-transform: lowercase;
+  letter-spacing: -2px;
+}
+
+/* LADO DIREITO */
+.doacao-info {
+  flex: 1;
+  text-align: right; 
+}
+
+.doacao-titulo {
+  font-size: 100px; /* Tamanho impacto */
+  line-height: 0.85;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: -4px;
+}
+
+.doacao-titulo span {
+  color: #ff5757; 
+}
+
+.doacao-subtitulo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  max-width: 500px;
+  margin-left: auto; /* Mantém alinhado à direita */
+}
+
+.doacao-texto {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 45px;
+  max-width: 480px;
+  margin-left: auto;
+  opacity: 0.9;
+}
+
+.btn-doacao {
+  display: inline-block;
+  background-color: #fdf5e6; /* Bege para destacar do roxo */
+  color: #111;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0px #111;
+  transition: all 0.2s ease;
+}
+
+.btn-doacao:hover {
+  transform: scale(1.05);
+  background-color: #ff5757;
+  color: #fff;
+}
+
+/* Efeito de clique (o botão "afunda") */
+.btn-doacao:active {
+  transform: translate(3px, 3px) scale(1.02); /* Desce em direção à sombra */
+  box-shadow: 2px 2px 0px #111;              /* A sombra diminui */
+  transition: all 0.1s;                      
+}
+
+
+/*----------------------------------------------------------------------- SEXTA SEÇÃO ---------------------------------------------------------*/
+
+
+/* FAIXA ANIMADA */
+.marquee {
+  width: 100%;
+  background-color: #fff; 
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  overflow: hidden; /* Esconde o que sai da tela */
+  padding: 10px 0;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: girar-faixa 20s linear infinite; /* Velocidade da animação */
+}
+
+.marquee-content span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff5757; 
+  padding: 0 10px;
+}
+
+@keyframes girar-faixa {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* Move metade, faz parecr infinito */
+}
+
+/* CONTEÚDO DA SEÇÃO */
+.ajudar-section {
+  background-color: #fdf5e6; 
+  padding: 80px 10%;
+  text-align: center;
+  border-bottom: 3px solid #111;
+}
+
+.ajudar-titulo {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: -3px;
+}
+
+.ajudar-descricao {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* GRID DE CARDS PIX/BANCO */
+.ajudar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ajudar-card {
+  background-color: #ffbdf7; 
+  border: 3px solid #111;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 10px 10px 0px #111; 
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.ajudar-card:hover {
+  transform: scale(1.03);
+}
+
+.ajudar-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.ajudar-card p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .ajudar-grid {
+    grid-template-columns: 1fr;
+  }
+  .ajudar-titulo {
+    font-size: 50px;
+  }
+}
+
+.ajudar-section{
+  background: url(imagens/fundo5.jpg);
+}
+
+/*----------------------------------------------------------------------- SÉTIMA SEÇÃO ---------------------------------------------------------*/
+
