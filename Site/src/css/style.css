@@ -1,0 +1,1046 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../assests/imagens/FUNDOS/fundo6.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+}
+
+h1,h2,h3,h4 {
+  user-select: none;
+  cursor: default;
+}
+
+#SEGUNDA-SECAO {
+  scroll-margin-top: 80px; 
+}
+#TERCEIRA-SECAO {
+  scroll-margin-top: 80px; 
+}
+#QUARTA-SECAO {
+  scroll-margin-top: 80px; 
+}
+#QUINTA-SECAO {
+  scroll-margin-top: 80px; 
+}
+#SEXTA-SECAO {
+  scroll-margin-top: 80px; 
+}
+
+
+/* ============================================================== PRIMEIRA SEÇÃO =============================================================== */
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav {
+  width: 100%;             
+  padding: 40px 5%;       
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #111;
+  background-color: #f8f4eb;
+  padding: 12px 30px; 
+  border-radius: 50px;
+  border: 3px solid #111;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  box-shadow: 4px 4px 0px #111; 
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #111;
+  color: #f30574;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;
+  width: 100%; /* Garante que ocupa toda a largura */
+  margin: 0;   /* Remove o auto que centraliza */
+  padding: 80px 60px 0 60px;
+  gap: 120px; 
+}
+
+
+.hero-left {
+  flex: 0 1 auto; /* Impede que o texto empurre o card */
+  max-width: 600px; /* Limita a largura do texto para ele não encostar no card */
+}
+
+.logo-text {
+  font-size: 130px;
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin: 0;
+}
+
+.logo-text span {
+  color: #f30574;
+}
+
+.linha {
+  width: 520px;
+  height: 1px;
+  background: #242424;
+  margin: 30px 0;
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.descricao {
+  max-width: 500px; /* Mantém o parágrafo em um bloco legível */
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* CARD COM ANIMAÇÃO */
+.hero-right {
+    flex: 0 0 auto; 
+}
+
+.card {
+  position: relative;
+  width: 380px; 
+  height: 380px;
+  animation: flutuar 3s ease-in-out infinite; 
+}
+
+.card-bg {
+  position: absolute;
+  bottom: -20px;  
+  right: -20px;   
+  width: 100%;
+  height: 100%;
+  background: #4b333c;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.card-content {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 3px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+
+/* ==============================================================  SEGUNDA SEÇÃO - SEÇÃO VALORES =============================================== */
+
+.valor-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.icone-valor {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px; /* Reduzido de 40px */
+    height: auto;
+}
+
+.valores-section {
+  width: 100%;
+  padding: 40px 20px; /* Padding menor em cima/baixo e nas laterais */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valores-titulo {
+  font-size: 100px; /* Reduzido de 110px */
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 40px; /* Reduzido de 60px */
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.valores-titulo span {
+  color: #000000;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.valor-content {
+  border-radius: 25px; /* Levemente menor */
+  background: #f8f4eb;
+  border: 3px solid #111;
+  padding: 25px;
+  height: auto; /*  250px para auto para o card se ajustar ao texto */
+  min-height: 180px; /* Define uma altura mínima menor que os 250px anteriores */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 6px 6px 0px #111; /* Sombra levemente menor */
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);  
+  transition: transform 0.3s ease, box-shadow 0.2s ease, opacity 0.8s ease-out;
+}
+
+.valor-content p {
+  font-size: 0.95rem; /* Fonte um pouco menor para economizar espaço */
+  line-height: 1.4;
+}
+
+.valor-content.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+.valor-card:nth-child(1) .valor-content.aparecer { transition-delay: 0.1s; }
+.valor-card:nth-child(2) .valor-content.aparecer { transition-delay: 0.1s; }
+.valor-card:nth-child(3) .valor-content.aparecer { transition-delay: 0.2s; }
+.valor-card:nth-child(4) .valor-content.aparecer { transition-delay: 0.2s; }
+
+.valor-card:hover .valor-content.aparecer {
+  transform: translate(-6px, -6px);
+  box-shadow: 14px 14px 0px #111;
+  transition-delay: 0s !important; 
+}
+.valores-grid .valor-card:nth-child(2) .valor-content {
+  transition-delay: 0.2s;
+}
+.valores-grid .valor-card:nth-child(3) .valor-content {
+  transition-delay: 0.1s;
+}
+.valor-card:hover .valor-content {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #111;
+}
+
+/* ============================================================== TERCEIRA SEÇÃO - SEÇÃO SERVIÇOS ============================================== */
+
+/* Container Principal da Seção */
+.servicos-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 10% 120px 10%; /* Topo: Xpx | Direita: X% | Baixo: Xpx | Esquerda: X% */
+}
+
+/* Divisor interno para alinhar esquerda e direita */
+.servicos-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 80px;
+  align-items: center;
+}
+
+/* --- ESTILO DOS TEXTOS (ESQUERDA) --- */
+
+.servicos-textos {
+  flex: 1;
+}
+
+.servicos-titulo {
+  font-size: 110px; /* Tamanho grande*/
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 40px;
+}
+
+.servicos-titulo span {
+  color: #AF40FF;
+}
+
+.servicos-descricao {
+  font-size: 24px;
+  line-height: 1.4;
+  max-width: 500px;
+  font-weight: 400;
+}
+
+/* --- ESTILO DOS CARDS (DIREITA) --- */
+
+.servicos-lista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os cards cor behe */
+}
+
+.servico-item {
+  background-color: #f8f4eb;
+  height: 75px; 
+  width: 100%;
+  border-radius: 50px;
+  border: 3px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  
+  /* Remove o sublinhado do link */
+  text-decoration: none; 
+  /*Garante que o link preencha o espaço */
+  display: flex; 
+
+  box-shadow: 6px 6px 0px #111; 
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+
+.servico-item:hover p {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.servico-item:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #111;
+  background-color: #ff5757;
+}
+
+.servico-item p {
+  font-size: 16px; 
+  font-weight: 700; 
+  color: #111;
+  text-align: center;
+  margin: 0; /*evitar deslocamentos do texto */
+}
+
+.servico-item:active {
+  transform: translate(3px, 3px); /* Ele "desce" na direção da sombra */
+  box-shadow: 2px 2px 0px #111;   /* A sombra diminui */
+}
+
+/*ANIMAÇÃO DOS CARD'S ZINHOS*/
+
+/* Estado inicial dos cards (escondidos) */
+.servico-item {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: 
+  opacity 0.8s ease-out, 
+  transform 0.2s ease-out, 
+  background-color 0.2s ease, 
+  box-shadow 0.2s ease;
+}
+
+/* Quando a classe 'animar' entra, eles sobem para a posição original (0) */
+.servico-item.animar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ================================================================ QUARTA SEÇÃO ============================================================== */
+
+/* FAIXA ANIMADA */
+.marquee {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+}
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: girar-faixa 35s linear infinite;
+}
+.marquee-content span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff00bf;
+  padding: 0 10px;
+}
+@keyframes girar-faixa {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* SEÇÃO PRINCIPAL */
+
+#QUARTA-SECAO{
+  padding: 80px 10%;
+  color: #fff;
+  background: url("../assests/imagens/FUNDOS/fundo4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+}
+
+
+.quarta-secao-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 230px;                  /* MUDAR AQUI SE QUISER AUMENTAR A DISTANCIA ENTRE AS SEÇÕES DA LOJA E DO BAZAR... */
+}
+
+/* === LINHA 1: CARROSSEL === */
+
+.linha-loja {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.loja-carrossel-col {
+  flex: 1;
+}
+
+.btn-loja {
+  margin-top: 50px;
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: #111;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0px #111;
+  transition: all 0.2s ease;
+}
+.btn-loja:hover {
+  transform: scale(1.05);
+  background-color: #ff5757;
+  color: #fff;
+}
+.btn-loja:active {
+  transform: translate(3px, 3px) scale(1.02);
+  box-shadow: 2px 2px 0px #111;
+  transition: all 0.1s;
+}
+
+.doacao-info-col {
+  flex: 1;
+  text-align: right;
+}
+.doacao-titulo {
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.85;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: -4px;
+}
+.doacao-titulo span {
+  color: #ff5757;
+}
+.doacao-subtitulo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  max-width: 500px;
+  margin-left: auto;
+}
+.doacao-texto {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 45px;
+  max-width: 480px;
+  margin-left: auto;
+  opacity: 0.9;
+}
+.btn-doacao {
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: #111;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0px #111;
+  transition: all 0.2s ease;
+}
+.btn-doacao:hover {
+  transform: scale(1.05);
+  background-color: #ff5757;
+  color: #fff;
+}
+.btn-doacao:active {
+  transform: translate(3px, 3px) scale(1.02);
+  box-shadow: 2px 2px 0px #111;
+  transition: all 0.1s;
+}
+
+/* ========== CARROSSEL ========== */
+.bazar-carousel {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  z-index: 5;
+}
+.bazar-carousel-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 3px solid #111;
+  box-shadow: 6px 6px 0 #111;
+}
+.bazar-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s ease;
+}
+.bazar-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.bazar-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.28);
+}
+.bazar-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bazar-slide span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+  color: #fff;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  z-index: 1;
+}
+.bazar-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 3px solid #111;
+  border-radius: 50%;
+  background: #fdf5e6;
+  color: #111;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
+  box-shadow: 4px 4px 0 #111;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.bazar-carousel-btn:hover {
+  background-color: #ff5757;
+  color: #fff;
+}
+.bazar-carousel-btn:active {
+  transform: translateY(calc(-50% + 3px));
+  box-shadow: 2px 2px 0 #111;
+}
+.bazar-carousel-btn-prev { left: 14px; }
+.bazar-carousel-btn-next { right: 14px; }
+
+/* === RESPONSIVO === */
+@media (max-width: 900px) {
+  .linha-loja,
+  .linha-bazar {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .doacao-info-col {
+    text-align: center;
+  }
+  .doacao-subtitulo,
+  .doacao-texto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bazar-carousel {
+    height: 260px;
+  }
+}
+@media (max-width: 600px) {
+  .bazar-carousel { height: 200px; }
+  .bazar-slide span { font-size: 36px; }
+  .categoria-item span { font-size: 32px; }
+  .doacao-titulo { font-size: 52px; }
+}
+
+
+/* ========== VOLUNTARIADO ========== */
+#VOLUNTARIO-SECAO {
+    width: 100%;
+    min-height: 550px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 60px 8%; 
+    box-sizing: border-box;
+    gap: 40px; 
+}
+
+.Voluntario-section {
+    max-width: 550px; 
+    text-align: left; 
+    color: #ffffff; 
+    margin-left: -80px;
+}
+
+.Voluntario-section h2 {
+  font-size: clamp(50px, 6vw, 80px);
+  line-height: 0.95;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: -4px;
+}
+
+.Voluntario-section h2 span {
+  color: #ff00bb;
+}
+
+.Voluntario-section .voluntariado-subtitulo {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.Voluntario-section p:not(.voluntariado-subtitulo) {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 45px;
+  opacity: 0.9;
+}
+
+.Voluntario-section p span {
+    color: #ff00bb; 
+    font-weight: 700; 
+}
+
+.photocard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 60px;
+}
+
+.photocard {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 16px 16px 32px 16px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photocard-sala {
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.photocard-sala:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.photocard-pessoas {
+  transform: rotate(-4deg);
+  margin-top: -35px;
+  margin-left: 70px;
+  z-index: 1;
+}
+
+.photocard-pessoas:hover {
+  transform: rotate(0deg) scale(1.03);
+  z-index: 3;
+}
+
+.photocard-foto {
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.photocard-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-voluntario {
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: #111;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0px #111;
+  transition: all 0.2s ease;
+}
+
+.btn-voluntario:hover {
+  transform: scale(1.05);
+  background-color: #ff00bb;
+  color: #fff;
+}
+
+.btn-voluntario:active {
+  transform: translate(3px, 3px) scale(1.02);
+  box-shadow: 2px 2px 0px #111;
+  transition: all 0.1s;
+}
+
+
+/* =============================================================== QUINTA SEÇÃO ================================================================ */
+
+
+/* CONTEÚDO DA SEÇÃO */
+.ajudar-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.ajudar-titulo {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: -3px;
+}
+
+.ajudar-titulo span{
+  transition: color 0.3s ease;
+}
+
+.ajudar-titulo span:hover {
+  color: #c300ff;
+}
+
+
+.ajudar-descricao {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* GRID DE CARDS PIX/BANCO */
+.ajudar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ajudar-card {
+  background-color: #ffdefb;  /*original: ffbdf7*/
+  border: 3px solid #111;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 10px 10px 0px #111; 
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.ajudar-card:hover {
+  transform: scale(1.03);
+}
+
+.ajudar-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.ajudar-card p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .ajudar-grid {
+    grid-template-columns: 1fr;
+  }
+  .ajudar-titulo {
+    font-size: 50px;
+  }
+}
+
+
+/* ================================================================ SEXTA SEÇÃO ==================================== */
+
+/* FOOTER  */
+footer {
+  border-top: 1px solid #ccc;
+  padding: 22px 40px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #2c2b2b;      /*original #555*/
+  line-height: 1.7;
+  background-color: whitesmoke; 
+}
+
+/* ================================================================
+   BLOCOS DE ANÚNCIO & EMPRESAS PARCEIRAS
+   Identidade visual: soft brutalism (bordas pretas, sombra sólida)
+   ================================================================ */
+
+/* ── Wrapper externo dos banners leaderboard ── */
+.ad-wrapper {
+  width: 100%;
+  padding: 40px 5% 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Container principal do banner ── */
+.ad-container {
+  position: relative;
+  border: 3px solid #111;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 #111;
+  background: #f8f4eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── Leaderboard (728×90 expandido) ── */
+.ad-leaderboard {
+  width: 100%;
+  max-width: 900px;
+  min-height: 100px;
+  padding: 16px 24px;
+}
+
+/* ── Rótulo discreto "Publicidade" ── */
+.ad-label {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  pointer-events: none;
+}
+
+/* ── Placeholder visual (remova quando inserir o AdSense/imagem) ── */
+.ad-placeholder {
+  width: 100%;
+  min-height: 72px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+}
+
+/* ── Seção Empresas Parceiras ── */
+.patrocinadores-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 56px auto 0;
+  text-align: center;
+}
+
+.patrocinadores-titulo {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.patrocinadores-titulo span {
+  color: #c026d3; /* mesma cor accent do site */
+}
+
+.patrocinadores-subtitulo {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+/* ── Grid de cards dos parceiros ── */
+.patrocinadores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ── Card individual do parceiro ── */
+.parceiro-card {
+  border: 3px solid #111;
+  border-radius: 18px;
+  box-shadow: 5px 5px 0 #111;
+  background: #f8f4eb;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.parceiro-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 #111;
+}
+
+/* ── Placeholder do logo (remova quando inserir a imagem real) ── */
+.ad-logo-ph {
+  width: 100%;
+  min-height: 60px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ── Logo real (ativa quando você substituir o placeholder) ── */
+.parceiro-card img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.2s;
+}
+
+.parceiro-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* ── Responsivo: tablets ── */
+@media (max-width: 900px) {
+  .patrocinadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ad-leaderboard {
+    min-height: 80px;
+  }
+}
+
+/* ── Responsivo: mobile ── */
+@media (max-width: 600px) {
+  .ad-wrapper {
+    padding: 32px 5% 0;
+  }
+
+  .ad-leaderboard {
+    border-radius: 14px;
+    min-height: 70px;
+  }
+
+  .patrocinadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .parceiro-card {
+    min-height: 90px;
+    padding: 16px 12px;
+    border-radius: 14px;
+  }
+
+  .patrocinadores-wrapper {
+    margin-top: 40px;
+  }
+}

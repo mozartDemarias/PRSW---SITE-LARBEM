@@ -1,19 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var doacaoInfo = document.querySelector(".doacao-info");
-  var lojaSection = document.querySelector(".secao-nossa-loja");
-  var lojaTexto = lojaSection ? lojaSection.querySelector(".bloco-texto") : null;
-
-  if (doacaoInfo && lojaTexto && !doacaoInfo.querySelector(".bloco-texto-loja-inline")) {
-    var lojaClone = lojaTexto.cloneNode(true);
-    lojaClone.classList.add("bloco-texto-loja-inline");
-    doacaoInfo.appendChild(lojaClone);
-  }
-
-  var data = [
-    { src: "imagens/Roupas.jpeg", alt: "Roupas", label: "roupas" },
-    { src: "imagens/Sapatos.jpeg", alt: "Sapatos", label: "sapatos" },
-    { src: "imagens/Acessorios.jpeg", alt: "Acessorios", label: "acessorios" },
-    { src: "imagens/Brinquedos.jpeg", alt: "Brinquedos", label: "brinquedos" }
+  
+ var data = [
+    { src: "imagens/roupa.jpg", alt: "Roupas", label: "roupas" },
+    { src: "imagens/tenis.jpg", alt: "Calçados", label: "calçados" },
+    { src: "imagens/acessorio.jpg", alt: "Acessórios", label: "acessorios" },
+    { src: "imagens/brinquedo.jpg", alt: "Brinquedos", label: "brinquedos" }
   ];
 
   var gridItems = Array.from(document.querySelectorAll(".categorias-lista .categoria-item"));
@@ -43,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var currentIndex = 0;
   var autoPlayId = null;
 
+  var touchStartX = 0;
+  var touchEndX = 0;
+
   function goToSlide(index) {
     currentIndex = (index + slides.length) % slides.length;
     track.style.transform = "translateX(-" + currentIndex * 100 + "%)";
@@ -69,6 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextButton.addEventListener("click", function () {
     goToSlide(currentIndex + 1);
+    startAutoPlay();
+  });
+
+  track.addEventListener("touchstart", function (event) {
+    touchStartX = event.touches[0].clientX;
+    stopAutoPlay();
+  });
+
+  track.addEventListener("touchend", function (event) {
+    touchEndX = event.changedTouches[0].clientX;
+
+    if (touchStartX - touchEndX > 50) {
+      goToSlide(currentIndex + 1);
+    }
+
+    if (touchEndX - touchStartX > 50) {
+      goToSlide(currentIndex - 1);
+    }
+
     startAutoPlay();
   });
 
