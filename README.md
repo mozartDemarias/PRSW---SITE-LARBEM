@@ -1,108 +1,217 @@
 # PRSW — SITE LARBEM
 
-Este repositório contém o desenvolvimento do site institucional da ONG LARBEM, com foco em transparência, captação de recursos e apoio à comunidade.
+Este repositório contém o desenvolvimento do site institucional da ONG LARBEM, com foco em transparência, captação de recursos, comunicação social e apoio à comunidade.
 
 ---
 
-## 🎯 Objetivo da Sprint 1
+# 📌 Evolução do Projeto
 
-Estabelecer a base do sistema web, incluindo a estrutura inicial do site, páginas institucionais e funcionalidades essenciais para navegação e apresentação da instituição.
+O projeto foi desenvolvido utilizando a metodologia ágil Scrum, com organização das tarefas através do GitHub Projects e acompanhamento contínuo das entregas por Sprint.
 
----
-
-## 📋 Backlog da Sprint 1
-
-As seguintes histórias de usuário foram selecionadas para esta Sprint:
-
-- [INSTITUCIONAL] Criar seção "Sobre Nós" e História  
-- [CONTATO] Página de contatos e links sociais  
-- [SERVIÇOS] Listagem de serviços de apoio  
-- [DOAÇÃO] Implementar botão "Doe Agora"  
-- [VOLUNTARIADO] Formulário de cadastro de voluntários  
-- [COMUNICAÇÃO] Newsletter e captura de e-mails  
+As Sprints foram organizadas com foco na evolução gradual do sistema, iniciando pela estrutura institucional do site e avançando para melhorias visuais, funcionalidades administrativas e refinamentos solicitados pelo cliente.
 
 ---
 
-## ⏱️ Estimativas
+# 🚀 Sprint 2 — Estilização e Responsividade
 
-As tarefas foram estimadas utilizando **Story Points (1–5)**, considerando a complexidade e esforço necessário:
+## 🎯 Objetivo
 
-| Complexidade | Story Points |
-|-------------|------------|
-| Baixa       | 1          |
-| Média       | 3          |
-| Alta        | 5          |
+A Sprint 2 teve como foco melhorar a experiência visual do sistema, aplicando estilização ao site institucional e garantindo responsividade para diferentes dispositivos.
 
 ---
 
-## 🧠 Registro das Daily Scrums
+## 📋 Funcionalidades Desenvolvidas
 
-### Dia 1
-- ✔ O que foi feito: Criação do repositório e levantamento inicial de requisitos  
-- 🔄 O que será feito: Criação das issues e organização do backlog  
-- ⚠ Impedimentos: Nenhum  
-
-### Dia 2
-- ✔ O que foi feito: Estruturação do GitHub Projects (Kanban)  
-- 🔄 O que será feito: Início do desenvolvimento das páginas institucionais  
-- ⚠ Impedimentos: Dúvidas sobre layout inicial  
-
-### Dia 3
-- ✔ O que foi feito: Implementação da página "Sobre Nós"  
-- 🔄 O que será feito: Página de contatos  
-- ⚠ Impedimentos: Ajustes de CSS  
+- Aplicação de identidade visual institucional  
+- Organização do layout das páginas  
+- Ajustes de responsividade para desktop e mobile  
+- Melhorias na navegação do sistema  
+- Refinamento de componentes visuais  
+- Padronização das seções do site  
 
 ---
 
-## 🚀 Incremento da Sprint
+## ✅ Resultados da Sprint
 
-Ao final da Sprint 1, foram entregues:
+Ao final da Sprint 2, o sistema passou a apresentar:
 
-- Estrutura base do site  
-- Páginas institucionais iniciais  
-- Sistema de navegação funcional  
-- Organização completa do projeto no GitHub (Issues + Kanban)  
+- Interface mais moderna e organizada  
+- Navegação mais intuitiva  
+- Compatibilidade com diferentes tamanhos de tela  
+- Melhor experiência do usuário  
+- Estrutura visual alinhada à proposta da ONG  
 
 ---
 
 ## 🔁 Retrospectiva da Sprint
 
-### ✔ O que funcionou bem
-- Boa organização do backlog  
-- Uso eficiente do GitHub Projects  
-- Clareza na definição das tarefas  
+### ✔ Pontos Positivos
 
-### ❌ O que pode melhorar
-- Melhor divisão de tarefas entre os membros  
-- Comunicação mais frequente  
+- Evolução significativa da interface  
+- Melhor organização visual do conteúdo  
+- Integração eficiente entre páginas  
 
-### 🚀 Ações para a próxima Sprint
-- Definir responsáveis por tarefa  
-- Estabelecer reuniões rápidas diárias  
-- Melhorar detalhamento das issues  
+### ❌ Pontos de Melhoria
+
+- Necessidade de maior padronização de componentes  
+- Ajustes adicionais em dispositivos menores  
+
+### 🚀 Próximas Ações
+
+- Refinar formulários  
+- Melhorar acessibilidade  
+- Implementar funcionalidades administrativas  
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+# 🚀 Sprint 3 — Melhorias Visuais e Ajustes na Navegação
+
+## 🎯 Objetivo
+
+A Sprint 3 concentrou-se em otimizações de navegação, melhorias visuais e implementação de funcionalidades complementares solicitadas durante o desenvolvimento.
+
+---
+
+## 📋 Funcionalidades Desenvolvidas
+
+- Ajustes na estrutura de menus  
+- Melhorias na experiência de navegação  
+- Implementação de áreas de voluntariado  
+- Criação e refinamento de formulários  
+- Ajustes em links e redirecionamentos  
+- Melhorias na responsividade  
+- Otimização da organização das páginas  
+
+---
+
+## ✅ Resultados da Sprint
+
+Ao final da Sprint 3, o sistema apresentou:
+
+- Fluxo de navegação mais eficiente  
+- Estrutura mais organizada  
+- Melhor integração entre páginas  
+- Funcionalidades de apoio mais completas  
+- Experiência de uso mais fluida  
+
+---
+
+## 🔁 Retrospectiva da Sprint
+
+### ✔ Pontos Positivos
+
+- Navegação mais intuitiva  
+- Evolução das funcionalidades institucionais  
+- Melhor estruturação do conteúdo  
+
+### ❌ Pontos de Melhoria
+
+- Refinar validações dos formulários  
+- Melhorar feedback visual para usuários  
+
+### 🚀 Próximas Ações
+
+- Corrigir inconsistências encontradas  
+- Aplicar melhorias solicitadas pelo cliente  
+- Revisar detalhes finais da interface  
+
+---
+
+# 🚀 Sprint 4 — Correções e Refinamentos
+
+## 🎯 Objetivo
+
+A Sprint 4 foi dedicada às correções finais do sistema, refinamentos visuais e implementação de ajustes solicitados pelo cliente durante as validações do projeto.
+
+---
+
+## 📋 Funcionalidades Desenvolvidas
+
+- Correção de bugs encontrados  
+- Ajustes finais de layout  
+- Refinamento da responsividade  
+- Revisão geral das páginas  
+- Melhorias em formulários e navegação  
+- Ajustes de conteúdo institucional  
+- Revisão da organização do backlog e tarefas  
+
+---
+
+## ✅ Resultados da Sprint
+
+Ao final da Sprint 4, o projeto alcançou:
+
+- Sistema mais estável  
+- Interface refinada  
+- Melhor desempenho visual  
+- Navegação mais consistente  
+- Estrutura pronta para apresentação  
+
+---
+
+## 🔁 Retrospectiva da Sprint
+
+### ✔ Pontos Positivos
+
+- Correção eficiente das inconsistências  
+- Melhor alinhamento com os requisitos do cliente  
+- Finalização organizada das entregas  
+
+### ❌ Pontos de Melhoria
+
+- Melhor planejamento para refinamentos futuros  
+- Antecipação de ajustes de interface  
+
+### 🚀 Ações Futuras
+
+- Implementação de novas funcionalidades  
+- Melhorias contínuas na experiência do usuário  
+- Expansão das áreas administrativas do sistema  
+
+---
+
+# 📊 Evolução do Backlog
+
+## Sprint 1
+
+Estrutura inicial do projeto e páginas institucionais.
+
+## Sprint 2
+
+Estilização do site e implementação da responsividade.
+
+## Sprint 3
+
+Melhorias visuais, navegação e refinamentos de funcionalidades.
+
+## Sprint 4
+
+Correções, refinamentos finais e ajustes solicitados pelo cliente.
+
+---
+
+# 🛠 Tecnologias Utilizadas
 
 - HTML5  
 - CSS3  
 - JavaScript  
 - GitHub Projects (Kanban)  
+- Scrum  
 
 ---
 
-## 📊 Organização do Projeto
+# 📌 Organização do Projeto
 
-O projeto segue a metodologia ágil **Scrum**, com:
+O projeto foi organizado utilizando:
 
 - Backlog estruturado via Issues  
-- Organização visual via Kanban  
-- Separação por funcionalidades (Epics)  
-- Controle de tarefas por status  
+- GitHub Projects para gerenciamento das tarefas  
+- Controle por status (Backlog, To Do, In Progress, Done)  
+- Divisão por funcionalidades e prioridades  
+- Planejamento incremental por Sprint  
 
 ---
 
-## 📌 Observações
+# 📈 Status Atual
 
-Este projeto está em desenvolvimento contínuo e evoluirá ao longo das próximas Sprints, com novas funcionalidades e melhorias.
+O sistema encontra-se em fase avançada de desenvolvimento, com funcionalidades principais implementadas, ajustes realizados e estrutura preparada para futuras evoluções.
